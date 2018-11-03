@@ -3,6 +3,7 @@ A collection of tests to ensure classes are implemented and functioning correctl
 """
 
 from linked_list import Node, Linked_List
+from queue import Queue
 
 def test_linked_list():
     """
@@ -101,3 +102,16 @@ def test_linked_list():
     assert reversed.size() == 2
     assert reversed.value_at(0) == 5
     assert reversed.value_at(1) == 2.5
+
+def test_queue():
+
+    test_queue = Queue(4)
+    assert test_queue.full() == False
+    assert test_queue.empty() == True
+
+    test_queue.enqueue(0)
+    test_queue.enqueue(1)
+    test_queue.enqueue(2)
+
+    assert test_queue.full() == True
+    assert test_queue.dequeue() == 0
