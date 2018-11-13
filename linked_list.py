@@ -1,3 +1,4 @@
+
 """
 Create a funtional linked list
 """
